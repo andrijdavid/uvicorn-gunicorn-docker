@@ -2,7 +2,7 @@ FROM pypy:3.6-7
 
 LABEL maintainer="Andrij David <david@geek.mg>"
 
-RUN apt update && apt install build-essential gcc
+RUN apt update && apt -y install build-essential gcc
 
 RUN pypy3 -m ensurepip
 
