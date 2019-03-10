@@ -1,14 +1,6 @@
-FROM pypy:3.6-7
+FROM pypy:3.6-7-slim
 
 LABEL maintainer="Andrij David <david@geek.mg>"
-
-RUN apt update && apt -y install build-essential gcc
-
-RUN pypy3 -m ensurepip
-
-RUN pip install uvicorn gunicorn
-
-RUN rm -rf /var/lib/apt/lists/*
 
 COPY ./start.sh /start.sh
 RUN chmod +x /start.sh
@@ -20,6 +12,14 @@ RUN chmod +x /start-reload.sh
 
 COPY ./app /app
 WORKDIR /app/
+
+RUN apt update && apt install -y build-essential
+
+RUN pypy3 -m ensurepip
+
+RUN pip install uvicorn gunicorn
+
+RUN rm -rf /var/lib/apt/lists/*
 
 ENV PYTHONPATH=/app
 
