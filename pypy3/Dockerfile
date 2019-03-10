@@ -2,7 +2,11 @@ FROM pypy:3.6-7
 
 LABEL maintainer="Andrij David <david@geek.mg>"
 
+RUN apt update & apt install build-essential
+
 RUN pip install uvicorn gunicorn
+
+RUN rm -rf /var/lib/apt/lists/*
 
 COPY ./start.sh /start.sh
 RUN chmod +x /start.sh
