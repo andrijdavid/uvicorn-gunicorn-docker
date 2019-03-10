@@ -2,9 +2,9 @@ FROM pypy:3.6-7
 
 LABEL maintainer="Andrij David <david@geek.mg>"
 
-RUN apt update && apt install build-essential 
+RUN apt update && apt install build-essential gcc
 
-RUN pypy -m ensurepip
+RUN pypy3 -m ensurepip
 
 RUN pip install uvicorn gunicorn
 
