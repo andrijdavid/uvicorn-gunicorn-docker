@@ -13,7 +13,7 @@ RUN chmod +x /start-reload.sh
 COPY ./app /app
 WORKDIR /app/
 
-RUN apt update && apt upgrade && apt install -y build-essential
+RUN apt update && apt -y upgrade && apt install -y build-essential
 
 RUN pypy3 -m ensurepip
 
