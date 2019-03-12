@@ -9,3 +9,9 @@ services:
   pypy3:
     build: ./pypy3
     image: andrijdavid/uvicorn-gunicorn:pypy3
+  3:
+    build: ./pypy3
+    image: andrijdavid/uvicorn-gunicorn:pypy3
+  3-slim:
+    build: ./pypy3-slim
+    image: andrijdavid/uvicorn-gunicorn:pypy3-slim
