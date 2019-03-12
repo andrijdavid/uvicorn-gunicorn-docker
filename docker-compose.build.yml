@@ -9,7 +9,7 @@ services:
   pypy3:
     build: ./pypy3
     image: andrijdavid/uvicorn-gunicorn:pypy3
-  3:
+  '3':
     build: ./pypy3
     image: andrijdavid/uvicorn-gunicorn:pypy3
   3-slim:
