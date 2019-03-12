@@ -1,0 +1,11 @@
+version: '3'
+services:
+  latest:
+    build: ./pypy3
+    image: andrijdavid/uvicorn-gunicorn:latest
+  pypy3-slim:
+    build: ./pypy3-slim
+    image: andrijdavid/uvicorn-gunicorn:pypy3-slim
+  pypy3:
+    build: ./pypy3
+    image: andrijdavid/uvicorn-gunicorn:pypy3

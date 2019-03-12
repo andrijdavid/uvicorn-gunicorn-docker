@@ -15,7 +15,7 @@ class App:
             }
         )
         version = f"{sys.version_info.major}.{sys.version_info.minor}"
-        message = f"Hello world! From Uvicorn with Gunicorn. Using Python {version}".encode(
+        message = f"Hello world! From Uvicorn with Gunicorn. Using PyPy {version}".encode(
             "utf-8"
         )
         await send({"type": "http.response.body", "body": message})

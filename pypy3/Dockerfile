@@ -17,7 +17,7 @@ RUN apt update && apt install -y build-essential
 
 RUN pypy3 -m ensurepip
 
-RUN pip install uvicorn gunicorn
+RUN pip install --no-cache-dir uvicorn gunicorn
 
 RUN rm -rf /var/lib/apt/lists/*
 
