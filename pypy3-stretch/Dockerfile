@@ -15,7 +15,7 @@ RUN chmod +x /start-reload.sh
 COPY ./app /app
 WORKDIR /app/
 
-RUN pypy3 -m ensurepip
+RUN pypy -m ensurepip
 
 RUN pip install --no-cache-dir uvicorn gunicorn
 

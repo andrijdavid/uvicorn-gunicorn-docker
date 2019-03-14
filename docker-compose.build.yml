@@ -3,18 +3,18 @@ services:
   latest:
     build: ./pypy3-stretch
     image: andrijdavid/uvicorn-gunicorn:latest
-  pypy3-jessie-slim:
-    build: ./pypy3-jessie-slim
-    image: andrijdavid/uvicorn-gunicorn:pypy3-jessie-slim
-  pypy3-jessie:
-    build: ./pypy3-jessie
-    image: andrijdavid/uvicorn-gunicorn:pypy3-jessie
+  pypy3-slim:
+    build: ./pypy3-slim
+    image: andrijdavid/uvicorn-gunicorn:pypy3-slim
+  pypy3:
+    build: ./pypy3
+    image: andrijdavid/uvicorn-gunicorn:pypy3
   pypy3-stretch:
     build: ./pypy3-stretch
     image: andrijdavid/uvicorn-gunicorn:pypy3-stretch
   '3':
-    build: ./pypy3-stretch
+    build: ./pypy3
     image: andrijdavid/uvicorn-gunicorn:pypy3
-  3-jessie-slim:
-    build: ./pypy3-jessie-slim
-    image: andrijdavid/uvicorn-gunicorn:pypy3-jessie-slim
+  3-slim:
+    build: ./pypy3-slim
+    image: andrijdavid/uvicorn-gunicorn:pypy3-slim
