@@ -9,9 +9,6 @@ services:
   pypy3:
     build: ./pypy3
     image: andrijdavid/uvicorn-gunicorn:pypy3
-  pypy3-stretch:
-    build: ./pypy3-stretch
-    image: andrijdavid/uvicorn-gunicorn:pypy3-stretch
   '3':
     build: ./pypy3
     image: andrijdavid/uvicorn-gunicorn:pypy3
