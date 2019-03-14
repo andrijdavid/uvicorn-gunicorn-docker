@@ -1,6 +1,8 @@
-FROM pypy:3.6-7-slim
+FROM debian:stretch
 
 LABEL maintainer="Andrij David <david@geek.mg>"
+
+RUN apt-get update && apt-get install -y pypy
 
 COPY ./start.sh /start.sh
 RUN chmod +x /start.sh
@@ -12,8 +14,6 @@ RUN chmod +x /start-reload.sh
 
 COPY ./app /app
 WORKDIR /app/
-
-RUN apt update && apt -y upgrade && apt install -y build-essential
 
 RUN pypy3 -m ensurepip
 
